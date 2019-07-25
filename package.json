@@ -1,0 +1,25 @@
+{
+  "name": "aula-songs-api",
+  "version": "1.0.0",
+  "description": "API for songs metadata management",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegomart2000/aula-songs-api.git"
+  },
+  "keywords": [
+    "API",
+    "NODE",
+    "EXPRESS",
+    "MONGO"
+  ],
+  "author": "Diego Martinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegomart2000/aula-songs-api/issues"
+  },
+  "homepage": "https://github.com/diegomart2000/aula-songs-api#readme"
+}
