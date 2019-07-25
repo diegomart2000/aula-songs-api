@@ -104,9 +104,7 @@ const getById = async (songId, asModel) => {
  */
 const list = async (page=0, size=30) => {
   try {
-
     const list = await Song.find(null, null, { skip: 10, limit: 5 }).exec();
-
     return list;
   } catch (err) {
     error(`SongService : Error while loading song list`, err);
