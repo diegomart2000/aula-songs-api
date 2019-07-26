@@ -78,4 +78,5 @@ Abstracting the access to db using Mongoose to take advantage of Scheme definiti
 
 ### Static files
 1. Move static files to a cdn and add the url slug to Song Models
-2. Use Passport and JWT to authentication and authorization
+2. Use Passport and JWT for authentication and authorization
+3. Add Elasticsearch for query capabilities
