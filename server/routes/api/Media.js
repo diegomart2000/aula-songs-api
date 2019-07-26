@@ -15,7 +15,7 @@ const get = async (req, res) => {
   try {
     const fileLoc = path.join(BASE_PATH, `${id}.mp3`);
   
-    const { length } = fs.statSync(fileLoc);
+    const { size } = fs.statSync(fileLoc);
     const stream = fs.createReadStream(fileLoc);
     // Handle non-existent file
     stream.on('error', (err) => {
@@ -29,7 +29,7 @@ const get = async (req, res) => {
     stream.on('end', () => res.end());
   
     // File exists, stream it to user
-    res.header('Content-Length', length);
+    res.header('Content-Length', size);
     res.header('Content-Type', 'audio/mpeg');
 
     res.status(200);
