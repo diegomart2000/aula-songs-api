@@ -72,3 +72,9 @@ In case of data updates, updates are triggered to the DB and the cache is update
 
 ### Models
 Abstracting the access to db using Mongoose to take advantage of Scheme definition and Validations.
+
+## To improve
+
+### Static files
+1. Move static files to a cdn and add the url slug to Song Models
+2. Use Passport and JWT to authentication and authorization
