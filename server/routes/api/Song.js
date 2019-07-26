@@ -3,15 +3,15 @@ const SongService = require('../../service/SongService');
 
 const Song = app => {
   app.get('/api/song', list);
-  app.post('/api/song/create', create);
+  app.post('/api/song', create);
   return app;
 };
 
 const create = async (req, res) => {
-  const { email, password, name } = req.body;
+  const { ownerId, title, album, artist, length } = req.body;
 
   try {
-    const song = await SongService.create(email, password, name);
+    const song = await SongService.create(ownerId, title, album, artist, length);
     res.status(200).send(song);
   } catch(err) {
     error(err);

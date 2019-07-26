@@ -14,7 +14,7 @@ const Song = require('../model/Song');
  */
 const create = async (ownerId, title, album, artist, length) => {
   try {
-    log(`SongService : Song create [u: ${ownerId}, n: ${name}]`);
+    log(`SongService : Song create [u: ${ownerId}, n: ${title}]`);
 
     const song = new Song({ ownerId, title, album, artist, length });
     await song.save();
@@ -26,7 +26,7 @@ const create = async (ownerId, title, album, artist, length) => {
 
     return song.toJSON();
   } catch (err) {
-    error(`SongService : Error while creating song for ${name}`, err);
+    error(`SongService : Error while creating song for ${title}`, err);
     throw err;
   }
 };
@@ -104,7 +104,8 @@ const getById = async (songId, asModel) => {
  */
 const list = async (page=0, size=30) => {
   try {
-    const list = await Song.find(null, null, { skip: 10, limit: 5 }).exec();
+    const skip = page * size;
+    const list = await Song.find(null, null, { skip, limit: size }).exec();
     return list;
   } catch (err) {
     error(`SongService : Error while loading song list`, err);
