@@ -13,6 +13,7 @@ For env configuration, create a `.env` file with following variables:
 HOST=localhost
 PORT=3000
 
+MEDIA_BASE_PATH=_ROUTE_TO_MEDIA_FILES_
 BACKEND_URL=http://localhost:3000
 CLIENT_BASE_URL=http://localhost:8080
 
